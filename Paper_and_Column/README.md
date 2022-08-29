@@ -8,4 +8,5 @@
 #### Column
 |Title|Author|Date|Page/PDF|
 |:---:|:---|:---:|:---:|
-|ETHEREUM DEVELOPMENT DOCUMENTATION|Last edit: [@corwintines](https://github.com/corwintines), October 18, 2021||[Page](https://ethereum.org/en/developers/docs/)|
+|ETHEREUM DEVELOPMENT DOCUMENTATION|Last edit: [@corwintines](https://github.com/corwintines)|October 18, 2021|[Page](https://ethereum.org/en/developers/docs/)|
+|NFT Hacks and Scams|Forkast|2022,Q1|[Page](https://forkast.news/state-of-the-nft-market/nft-hacks-and-scams/)|

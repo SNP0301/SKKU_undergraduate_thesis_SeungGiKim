@@ -10,3 +10,4 @@
 |:---:|:---|:---:|:---:|
 |ETHEREUM DEVELOPMENT DOCUMENTATION|Last edit: [@corwintines](https://github.com/corwintines)|October 18, 2021|[Page](https://ethereum.org/en/developers/docs/)|
 |NFT Hacks and Scams|Forkast|2022, Q1|[Page](https://forkast.news/state-of-the-nft-market/nft-hacks-and-scams/)|
+|Looks bare: OpenSea turns into NFT ghost-town after daily volume plunges 99% from peak|Yashu Gola|August 29, 2022|[Page](https://cointelegraph.com/news/looks-bare-opensea-turns-into-nft-ghost-town-after-volume-plunges-99-in-90-days)|

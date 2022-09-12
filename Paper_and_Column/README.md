@@ -12,7 +12,7 @@
 |NFT Hacks and Scams|Forkast|2022, Q1|[Page](https://forkast.news/state-of-the-nft-market/nft-hacks-and-scams/)|
 |Looks bare: OpenSea turns into NFT ghost-town after daily volume plunges 99% from peak|Yashu Gola|August 29, 2022|[Page](https://cointelegraph.com/news/looks-bare-opensea-turns-into-nft-ghost-town-after-volume-plunges-99-in-90-days)|
 |Blockchains & NFTs|Forkast|2022, Q1|[Page](https://forkast.news/state-of-the-nft-market/blockchains-and-nfts/)|
-
+|암호화폐·NFT 노리는 해킹 증가...블록체인은 안전할까?|Sang Woo, Lee|April 3rd, 2022|[Page](https://www.ajunews.com/view/20220403073351876)|
 
 #### Services
 |Title|Services & Contents|

@@ -13,7 +13,7 @@ contract("NftPaper", (accounts) => {
   });
 
   describe("deployment", async () => {
-    it("deploys successfully", async () => {
+    it("[DEPLOYMENT]", async () => {
       //contract = await NftPaper.deployed();
       const address = contract.address;
       assert.notEqual(address, "");
@@ -22,19 +22,19 @@ contract("NftPaper", (accounts) => {
       assert.notEqual(address, 0x0);
     });
 
-    it("verify name", async () => {
+    it("[VERIFYING] verify name", async () => {
       const name = await contract.name();
       assert.equal(name, "Seung_Gi_Kim");
     });
 
-    it("verify student number", async () => {
+    it("[VERIFYING] verify student number", async () => {
       const studentNumber = await contract.studentNumber();
       assert.equal(studentNumber, "2017314243");
     });
   });
 
   describe("minting", async () => {
-    it("creates a new token", async () => {
+    it("[MINTING] creates a new token", async () => {
       const result = await contract.mint("https...1");
       const totalSupply = await contract.totalSupply();
 
@@ -52,7 +52,7 @@ contract("NftPaper", (accounts) => {
   });
 
   describe("indexing", async () => {
-    it("[LISTING] published papers", async () => {
+    it("[INDEXING] published papers", async () => {
       await contract.mint("https...2");
       await contract.mint("https...3");
       await contract.mint("https...4");
@@ -60,6 +60,7 @@ contract("NftPaper", (accounts) => {
 
       let result = [];
       let NftPaper;
+      let i;
 
       for (i = 1; i <= totalSupply; i++) {
         NftPaper = await contract.nftPapers(i - 1);
@@ -71,5 +72,3 @@ contract("NftPaper", (accounts) => {
     });
   });
 });
-
-//// kryptoBird.deployed().address = '0x1523dFAbC1F2bE8Dfa80f7f4dFe8016F6749AE2a'

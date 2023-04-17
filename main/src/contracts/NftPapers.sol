@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract NftPaper {
+import './ERC721Connector.sol';
 
-    string public name;
-    string public studentNumber;
+contract NftPaper is ERC721Connector {
+
 
     /*
     const minterName = "OO University";
@@ -15,11 +15,8 @@ contract NftPaper {
     const counter = 5;
     */
 
-    constructor() {
-        name = 'David';
-        studentNumber = '2017314243';
+    constructor() ERC721Connector('Seung_Gi_Kim','2017314243') {
     }
-
     
 
 }

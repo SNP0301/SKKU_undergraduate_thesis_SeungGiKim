@@ -11,11 +11,11 @@ contract ERC721Metadata{
         _studentNumber = numbered;
     }
 
-    function name() external returns(string memory){
+    function name() external view returns(string memory){
         return _name;
     }
 
-    function studentNumber() external returns(string memory){
+    function studentNumber() external view returns(string memory){
         return _studentNumber;
     }
 }

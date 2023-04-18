@@ -25,11 +25,11 @@ contract NftPaper is ERC721Connector {
 
         require(!_nftPapersExists[_nftPaper],
         'Error - Paper is already published');
-        // this is deprecated - uint _id = KryptoBirdz.push(_nftPaper);
+
         nftPapers.push(_nftPaper);
         uint _id = nftPapers.length - 1;
 
-        // .push no longer returns the length but a ref to the added element
+        
         _mint(msg.sender, _id);
 
         _nftPapersExists[_nftPaper] = true;

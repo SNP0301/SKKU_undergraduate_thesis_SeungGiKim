@@ -24,7 +24,7 @@ class App extends Component {
 
     if (provider) {
       //Metamask Connection: successful
-      console.log("ethereum wallet is connected");
+      console.log("Ethereum wallet is connected");
       window.web3 = new Web3(provider);
     } else {
       //Metamask Connection: failed
@@ -43,8 +43,10 @@ class App extends Component {
     if (networkData) {
       const abi = NftPaper.abi;
       const address = networkData.address;
+
       const contract = new web3.eth.Contract(abi, address);
       this.setState({ contract });
+      console.log(contract);
 
       const totalSupply = await contract.methods.totalSupply().call();
       this.setState({ totalSupply });
@@ -60,8 +62,6 @@ class App extends Component {
       window.alert("Smart contract not deployed");
     }
   }
-
-  // with minting we are sending information and we need to specify the account
 
   mint = (nftPaper) => {
     this.state.contract.methods
@@ -83,11 +83,6 @@ class App extends Component {
       nftPapers: [],
     };
   }
-
-  // BUILDING THE MINTING FORM
-  // 1. Create a text input with a place holder
-  //'add file location'
-  // 2. Create another input button with the type submit
 
   render() {
     return (
@@ -151,34 +146,39 @@ class App extends Component {
           <hr></hr>
           <div className="row textCenter">
             {this.state.nftPapers.map((nftPaper, key) => {
-              return (
-                <div>
-                  <div>
-                    <MDBCard
-                      className="token img"
-                      style={{ maxWidth: "22rem" }}
-                    >
-                      <MDBCardImage
-                        src={nftPaper}
-                        //<a href="https://ibb.co/PmbKgNH"><img src="https://i.ibb.co/ngV9jbJ/20230112-142007.jpg" alt="20230112-142007" border="0"></a>
-                        //<a href="https://ibb.co/swsC3CP"><img src="https://i.ibb.co/tsYzCzh/Screen-Shot-2022-12-23-at-12-49-21-PM.png" alt="Screen-Shot-2022-12-23-at-12-49-21-PM" border="0"></a>
-
-                        position="top"
-                        height="250rem"
-                        style={{ marginRight: "4px" }}
-                      />
-                      <MDBCardBody>
-                        <MDBCardTitle> NFT paper </MDBCardTitle>
-                        <MDBCardText>
-                          {" "}
-                          Successfully minted NFT paper!{" "}
-                        </MDBCardText>
-                        <MDBBtn href={nftPaper}>Download</MDBBtn>
-                      </MDBCardBody>
-                    </MDBCard>
+              if (true) {
+                return (
+                  <div id="NFTs">
+                    <div>
+                      <MDBCard
+                        className="token img"
+                        style={{ maxWidth: "22rem" }}
+                      >
+                        <MDBCardImage
+                          src={nftPaper}
+                          //<a href="https://ibb.co/vvs65Nx"><img src="https://i.ibb.co/fG8zR3Y/image.png" alt="image" border="0"></a>
+                          //
+                          //<a href="https://ibb.co/bFQ0Ctp"><img src="https://i.ibb.co/MfZvtdq/1.png" alt="1" border="0"></a>
+                          //<a href="https://ibb.co/zHSkK95"><img src="https://i.ibb.co/JFzhX6d/2.png" alt="2" border="0"></a>
+                          //<a href="https://ibb.co/rGZD7fL"><img src="https://i.ibb.co/kghNH6r/3.png" alt="3" border="0"></a>
+                          //<a href="https://ibb.co/v4CBNrw"><img src="https://i.ibb.co/7txz3TY/4.png" alt="4" border="0"></a>
+                          position="top"
+                          height="250rem"
+                          style={{ marginRight: "4px" }}
+                        />
+                        <MDBCardBody>
+                          <MDBCardTitle> NFT paper </MDBCardTitle>
+                          <MDBCardText>
+                            {" "}
+                            Successfully minted NFT paper!{" "}
+                          </MDBCardText>
+                          <MDBBtn href={nftPaper}>Download</MDBBtn>
+                        </MDBCardBody>
+                      </MDBCard>
+                    </div>
                   </div>
-                </div>
-              );
+                );
+              }
             })}
           </div>
         </div>

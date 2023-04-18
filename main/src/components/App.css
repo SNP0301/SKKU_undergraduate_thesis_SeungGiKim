@@ -11,6 +11,10 @@ body {
   color: black;
 }
 
+#NFTs {
+  float: left;
+}
+
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -46,7 +50,7 @@ img {
 
 .container-filled {
   position: absolute;
-  width: 100%;
+  width: 50%;
   text-align: center;
   top: 5%;
 }

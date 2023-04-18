@@ -98,20 +98,20 @@ class App extends Component {
                 bg-dark flex-md-nowrap p-0 shadow"
         >
           <div
-            className="navbar-brand col-sm-3 col-md-3 
+            className="navbar-brand col-sm- col-md-3 
                 mr-0"
-            style={{ color: "white" }}
+            id="title"
           >
-            Krypto Birdz NFTs (Non Fungible Tokens)
+            NFT Papers
           </div>
           <ul className="navbar-nav px-3">
-            <li
+            <ul
               className="nav-item text-nowrap
                 d-none d-sm-none d-sm-block
                 "
             >
-              <small className="text-white">{this.state.account}</small>
-            </li>
+              <ul>연결된 계좌: {this.state.account}</ul>
+            </ul>
           </ul>
         </nav>
 
@@ -139,7 +139,7 @@ class App extends Component {
                     ref={(input) => (this.nftPaper = input)}
                   />
                   <input
-                    style={{ margin: "6px" }}
+                    style={{ margin: "20px" }}
                     type="submit"
                     className="btn btn-primary btn-black"
                     value="MINT"
@@ -163,7 +163,6 @@ class App extends Component {
                         //<a href="https://ibb.co/PmbKgNH"><img src="https://i.ibb.co/ngV9jbJ/20230112-142007.jpg" alt="20230112-142007" border="0"></a>
                         //<a href="https://ibb.co/swsC3CP"><img src="https://i.ibb.co/tsYzCzh/Screen-Shot-2022-12-23-at-12-49-21-PM.png" alt="Screen-Shot-2022-12-23-at-12-49-21-PM" border="0"></a>
 
-                        //minting contract adress:     0x6cCcaDB2263Dd3555734C66073979B92Bea403C9
                         position="top"
                         height="250rem"
                         style={{ marginRight: "4px" }}
@@ -172,10 +171,7 @@ class App extends Component {
                         <MDBCardTitle> NFT paper </MDBCardTitle>
                         <MDBCardText>
                           {" "}
-                          The KryptoBirdz are 20 uniquely generated KBirdz from
-                          the cyberpunk cloud galaxy Mystopia! There is only one
-                          of each bird and each bird can be owned by a single
-                          person on the Ethereum blockchain.{" "}
+                          Successfully minted NFT paper!{" "}
                         </MDBCardText>
                         <MDBBtn href={nftPaper}>Download</MDBBtn>
                       </MDBCardBody>

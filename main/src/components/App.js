@@ -134,6 +134,11 @@ class App extends Component {
                     ref={(input) => (this.nftPaper = input)}
                   />
                   <input
+                    type="text"
+                    placeholder="Write Description"
+                    className="form-control mb-1"
+                  />
+                  <input
                     style={{ margin: "20px" }}
                     type="submit"
                     className="btn btn-primary btn-black"
@@ -157,7 +162,7 @@ class App extends Component {
                         <MDBCardImage
                           src={nftPaper}
                           //<a href="https://ibb.co/vvs65Nx"><img src="https://i.ibb.co/fG8zR3Y/image.png" alt="image" border="0"></a>
-                          //
+
                           //<a href="https://ibb.co/bFQ0Ctp"><img src="https://i.ibb.co/MfZvtdq/1.png" alt="1" border="0"></a>
                           //<a href="https://ibb.co/zHSkK95"><img src="https://i.ibb.co/JFzhX6d/2.png" alt="2" border="0"></a>
                           //<a href="https://ibb.co/rGZD7fL"><img src="https://i.ibb.co/kghNH6r/3.png" alt="3" border="0"></a>
@@ -170,7 +175,7 @@ class App extends Component {
                           <MDBCardTitle> NFT paper </MDBCardTitle>
                           <MDBCardText>
                             {" "}
-                            Successfully minted NFT paper!{" "}
+                            {this.state.nftPapers.totalSupply}{" "}
                           </MDBCardText>
                           <MDBBtn href={nftPaper}>Download</MDBBtn>
                         </MDBCardBody>

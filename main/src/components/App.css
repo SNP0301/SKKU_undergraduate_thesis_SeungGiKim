@@ -11,10 +11,6 @@ body {
   color: black;
 }
 
-#NFTs {
-  float: left;
-}
-
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;

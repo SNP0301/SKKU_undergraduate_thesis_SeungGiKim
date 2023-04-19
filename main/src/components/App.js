@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
 import NftPaper from "../abis/NftPaper.json";
+import { TextInputConcatenator } from "./concatenate.js";
 import {
   MDBCard,
   MDBCardBody,

@@ -85,7 +85,143 @@ class App extends Component {
   }
 
   render() {
-    return <div>RESTART!</div>;
+    return (
+      <div className="container-filled">
+        {console.log(this.state.nftPapers)}
+        <nav
+          className="navbar navbar-dark fixed-top 
+                bg-dark flex-md-nowrap p-0 shadow"
+        >
+          <div
+            className="navbar-brand col-sm- col-md-3 
+                mr-0"
+            id="title"
+          >
+            NFT Papers
+          </div>
+          <ul className="navbar-nav px-3">
+            <ul
+              className="nav-item text-nowrap
+                d-none d-sm-none d-sm-block
+                "
+            >
+              <ul>연결된 계좌: {this.state.account}</ul>
+            </ul>
+          </ul>
+        </nav>
+
+        <div className="container-fluid mt-1">
+          <div className="row">
+            <main role="main" className="col-lg-12 d-flex text-center">
+              <div
+                className="content mr-auto ml-auto"
+                style={{ opacity: "0.8" }}
+              >
+                <h1 style={{ color: "black" }}>
+                  00. Create . JSON of the award
+                </h1>
+                <input
+                  type="text"
+                  placeholder="Student Name"
+                  className="form-control mb-1"
+                />
+                <input
+                  type="text"
+                  placeholder="Student Number"
+                  className="form-control mb-1"
+                />
+                <input
+                  type="text"
+                  placeholder="Award Name"
+                  className="form-control mb-1"
+                />
+                <input
+                  type="text"
+                  placeholder="Date"
+                  className="form-control mb-1"
+                />
+                <input
+                  type="text"
+                  placeholder="Short description"
+                  className="form-control mb-1"
+                />
+                <input
+                  type="text"
+                  placeholder="Image URL"
+                  className="form-control mb-1"
+                />
+                <hr></hr>
+                <h1 style={{ color: "black" }}>
+                  01. Enter yout image src URL/URI
+                </h1>
+                <hr></hr>
+                <h1 style={{ color: "black" }}>02. Mint your NFT!</h1>
+                <hr></hr>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    const nftPaper = this.nftPaper.value;
+                    this.mint(nftPaper);
+                  }}
+                >
+                  <input
+                    type="text"
+                    placeholder="Add a file location"
+                    className="form-control mb-1"
+                    ref={(input) => (this.nftPaper = input)}
+                  />
+
+                  <input
+                    style={{ margin: "20px" }}
+                    type="submit"
+                    className="btn btn-primary btn-black"
+                    value="MINT"
+                  />
+                </form>
+              </div>
+            </main>
+          </div>
+          <hr></hr>
+          <div className="row textCenter">
+            {this.state.nftPapers.map((nftPaper, key) => {
+              if (true) {
+                return (
+                  <div id="NFTs">
+                    <div>
+                      <MDBCard
+                        className="token img"
+                        style={{ maxWidth: "22rem" }}
+                      >
+                        <MDBCardImage
+                          src={nftPaper}
+                          //<a href="https://ibb.co/vvs65Nx"><img src="https://i.ibb.co/fG8zR3Y/image.png" alt="image" border="0"></a>
+
+                          //<a href="https://ibb.co/bFQ0Ctp"><img src="https://i.ibb.co/MfZvtdq/1.png" alt="1" border="0"></a>
+                          //<a href="https://ibb.co/zHSkK95"><img src="https://i.ibb.co/JFzhX6d/2.png" alt="2" border="0"></a>
+                          //<a href="https://ibb.co/rGZD7fL"><img src="https://i.ibb.co/kghNH6r/3.png" alt="3" border="0"></a>
+                          //<a href="https://ibb.co/v4CBNrw"><img src="https://i.ibb.co/7txz3TY/4.png" alt="4" border="0"></a>
+                          position="top"
+                          height="250rem"
+                          style={{ marginRight: "4px" }}
+                        />
+                        <MDBCardBody>
+                          <MDBCardTitle> NFT paper </MDBCardTitle>
+                          <MDBCardText>
+                            {" "}
+                            {this.state.nftPapers.totalSupply}{" "}
+                          </MDBCardText>
+                          <MDBBtn href={nftPaper}>Download</MDBBtn>
+                        </MDBCardBody>
+                      </MDBCard>
+                    </div>
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

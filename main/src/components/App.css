@@ -2,15 +2,15 @@ body {
   height: 100vh;
   width: 100%;
   margin: 0;
-
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   animation: gradientBG 15s ease infinite;
   background-size: 400% 400%;
 }
-#title {
-  font-size: 60px;
-  color: black;
-}
 
+#NFTs {
+  display: flex;
+  align-items: left;
+}
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -38,15 +38,15 @@ body {
 img {
   border: 0.3px rgba(#e0e0e0);
   box-shadow: 10px 10px 8px rgba(#111111);
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 5px;
-  width: 100%;
+  width: 150px;
   margin-top: 10px;
 }
 
 .container-filled {
   position: absolute;
-  width: 50%;
+  width: 100%;
   text-align: center;
-  top: 5%;
+  top: 15%;
 }

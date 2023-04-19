@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { useState } from "react";
+//import { useState } from "react";
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
 import NftPaper from "../abis/NftPaper.json";
@@ -85,23 +85,6 @@ class App extends Component {
     };
   }
 
-  /*
-  async inputName() {
-    const [name, setName] = useState("");
-
-    function handleName(e) {
-      setName(e.target.value);
-    }
-
-    return (
-      <div>
-        <input type="text" value={name} onChange={handleName} />
-        <div>{name}</div>
-      </div>
-    );
-  }
-*/
-
   render() {
     return (
       <div className="container-filled">
@@ -143,6 +126,11 @@ class App extends Component {
                   type="text"
                   placeholder="Student Name"
                   className="form-control mb-1"
+                  onClick={(input) => {
+                    let studentName;
+                    this.studentName = input;
+                    console.log(this.studentName);
+                  }}
                 />
 
                 <input
@@ -158,9 +146,11 @@ class App extends Component {
                 <input
                   type="button"
                   value="make json!"
-                  onClick={(event) => {
-                    console.log("hi");
-                  }}
+                  /*
+                    onClick={(event) => {
+                    this.name = event.target.value;
+                    console.log(this.name);
+                  }}*/
                 />
                 <hr></hr>
                 <h1 style={{ color: "black" }}>
@@ -181,6 +171,11 @@ class App extends Component {
                     placeholder="Add a file location"
                     className="form-control mb-1"
                     ref={(input) => (this.nftPaper = input)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Student name"
+                    className="form-control mb-1"
                   />
 
                   <input
@@ -207,7 +202,6 @@ class App extends Component {
                         <MDBCardImage
                           src={nftPaper}
                           //<a href="https://ibb.co/vvs65Nx"><img src="https://i.ibb.co/fG8zR3Y/image.png" alt="image" border="0"></a>
-
                           //<a href="https://ibb.co/bFQ0Ctp"><img src="https://i.ibb.co/MfZvtdq/1.png" alt="1" border="0"></a>
                           //<a href="https://ibb.co/zHSkK95"><img src="https://i.ibb.co/JFzhX6d/2.png" alt="2" border="0"></a>
                           //<a href="https://ibb.co/rGZD7fL"><img src="https://i.ibb.co/kghNH6r/3.png" alt="3" border="0"></a>

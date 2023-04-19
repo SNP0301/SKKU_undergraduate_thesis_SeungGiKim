@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useState } from "react";
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
 import NftPaper from "../abis/NftPaper.json";
@@ -84,6 +85,23 @@ class App extends Component {
     };
   }
 
+  /*
+  async inputName() {
+    const [name, setName] = useState("");
+
+    function handleName(e) {
+      setName(e.target.value);
+    }
+
+    return (
+      <div>
+        <input type="text" value={name} onChange={handleName} />
+        <div>{name}</div>
+      </div>
+    );
+  }
+*/
+
   render() {
     return (
       <div className="container-filled">
@@ -120,26 +138,13 @@ class App extends Component {
                 <h1 style={{ color: "black" }}>
                   00. Create . JSON of the award
                 </h1>
+
                 <input
                   type="text"
                   placeholder="Student Name"
                   className="form-control mb-1"
                 />
-                <input
-                  type="text"
-                  placeholder="Student Number"
-                  className="form-control mb-1"
-                />
-                <input
-                  type="text"
-                  placeholder="Award Name"
-                  className="form-control mb-1"
-                />
-                <input
-                  type="text"
-                  placeholder="Date"
-                  className="form-control mb-1"
-                />
+
                 <input
                   type="text"
                   placeholder="Short description"
@@ -150,9 +155,16 @@ class App extends Component {
                   placeholder="Image URL"
                   className="form-control mb-1"
                 />
+                <input
+                  type="button"
+                  value="make json!"
+                  onClick={(event) => {
+                    console.log("hi");
+                  }}
+                />
                 <hr></hr>
                 <h1 style={{ color: "black" }}>
-                  01. Enter yout image src URL/URI
+                  01. Enter your image src URL/URI
                 </h1>
                 <hr></hr>
                 <h1 style={{ color: "black" }}>02. Mint your NFT!</h1>
